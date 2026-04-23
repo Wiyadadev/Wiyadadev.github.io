@@ -1,44 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Bank Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+
+    header {
+      padding: 80px 20px;
       text-align: center;
     }
-    .container {
-      padding: 50px;
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
     }
-    .project {
+
+    header p {
+      color: #94a3b8;
+      font-size: 18px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #38bdf8;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
       background: #1e293b;
-      margin: 20px;
       padding: 20px;
       border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Bank</h1>
-    <p>Web Developer</p>
 
+  <header>
+    <h1>Bank</h1>
+    <p>Frontend Web Developer</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </header>
+
+  <div class="section" id="projects">
     <h2>My Projects</h2>
 
-    <div class="project">
-      <h3>Business Website</h3>
-      <p>Responsive website using HTML, CSS, JavaScript</p>
-    </div>
+    <div class="projects">
 
-    <div class="project">
-      <h3>E-commerce Website</h3>
-      <p>Online store with shopping cart</p>
-    </div>
+      <div class="card">
+        <h3>Business Website</h3>
+        <p>Responsive website built with HTML, CSS, and JavaScript.</p>
+      </div>
 
+      <div class="card">
+        <h3>E-commerce Website</h3>
+        <p>Online store with product pages and shopping features.</p>
+      </div>
+
+      <div class="card">
+        <h3>Landing Page</h3>
+        <p>High-converting landing page for marketing campaigns.</p>
+      </div>
+
+    </div>
   </div>
+
+  <footer>
+    <p>© 2026 Bank | Web Developer</p>
+  </footer>
+
 </body>
 </html>
