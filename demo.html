@@ -205,7 +205,7 @@ h1{font-size:clamp(2.3rem,11vw,3.6rem)}
 <section style="padding-top:0">
 <div class="channels">
 
-<a class="channel" id="smartlead" href="#" data-demo="SmartLead AI Agent">
+<a class="channel" id="smartlead" href="https://youtu.be/0Rr5wtGj9GE" target="_blank" data-demo="SmartLead AI Agent" data-real="true">
 <span class="channel-num">01</span>
 <span class="channel-mid">
 <span class="channel-play"><span class="play-tri"></span></span>
@@ -223,7 +223,7 @@ h1{font-size:clamp(2.3rem,11vw,3.6rem)}
 <span class="channel-watch">Watch Demo →</span>
 </a>
 
-<a class="channel" id="lil-club" href="#" data-demo="Lil Club">
+<a class="channel" id="lil-club" href="https://youtu.be/6elm-ymepUQ" target="_blank" data-demo="Lil Club" data-real="true">
 <span class="channel-num">03</span>
 <span class="channel-mid">
 <span class="channel-play"><span class="play-tri"></span></span>
@@ -292,6 +292,9 @@ h1{font-size:clamp(2.3rem,11vw,3.6rem)}
 <script>
 document.querySelectorAll('.channel').forEach(function(el){
   el.addEventListener('click', function(e){
+    if (this.getAttribute('data-real') === 'true') {
+      return; // real video link — let it open normally
+    }
     e.preventDefault();
     var name = this.getAttribute('data-demo');
     // TODO: replace with a real embedded video / modal per project
